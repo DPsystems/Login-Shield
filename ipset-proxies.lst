@@ -1,0 +1,94 @@
+# ip-proxies.lset
+#
+# Known proxy servers - always a good idea to block
+#
+# us - ipvanish.com
+216.151.176.0/20
+
+# russian dynamic IP space
+77.40.16.0/21
+
+# uk - tor
+185.104.120.0/24
+
+# US NY Brooklyn Calyxinstitute.org (tor)
+162.247.72.0/22
+
+# Emerald Onion - TOR routers
+23.129.64.0/24
+
+# Vancouver Society for Internet Freedom (tor)
+104.218.63.0/24
+
+# proxy/tor servers - blocked in bigger block
+#141.98.254.0/24
+
+# de - Plutext - (tor)
+109.69.67.0/24
+
+# at - applied privacy (tor)
+109.70.100.0/24
+
+# se - (tor)
+158.174.122.0/24
+171.25.193.0/24
+
+# ch - (tor)
+176.10.104.0/24
+
+# US - accessnow (tor)
+176.10.99.0/24
+
+# ca,it - oneprovider (suspected tor)
+176.126.83.0/24
+
+# md - tor servers - Trabia networks
+178.175.128.0/19
+
+# fi,ro - flokinet - (tor)
+185.100.85.0/24
+185.100.86.0/24
+185.100.87.0/24
+185.10.68.0/24
+185.165.168.0/24
+185.165.169.0/24
+
+# nl - nforce entertainment (tor)
+185.107.47.0/24
+185.107.68.0/22
+185.107.80.0/22
+185.107.92.0/22
+
+# de Portunity (tor)
+185.112.254.0/24
+
+# de 23media (tor)
+185.117.214.0/23
+
+# tr (tor)
+185.125.33.0/24
+
+# gb citynetwork (tor)
+185.16.85.0/24
+
+# bv (tor)
+185.193.125.0/24
+
+# de (tor)
+185.220.100.0/24
+185.220.101.0/24
+185.220.102.0/24
+
+# ie (tor)
+185.234.217.0/24
+185.234.219.0/24
+
+# nl (vps/tor)
+185.248.160.0/24
+
+# gr (tor)
+185.4.132.0/24
+
+# se (tor)
+185.86.149.0/24
+

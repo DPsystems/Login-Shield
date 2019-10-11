@@ -1,0 +1,29 @@
+# VERSION HISTORY
+# ===============
+
+Version 0.01b - 2019-10 - Initial public committed version
+
+# DEVELOPER NOTES
+# ===============
+
+Right now this system is not persistant/permanent.  There are a bunch of features I'd like to 
+add to make this more flexible.  Here are future to-do items:
+
+* figure where the standard place to install persistent files should be across all platforms
+  (or actually make a real installation script)
+
+* create a host-specific configuration file that will save special changes/exceptions so that
+  when the base version is updated, it can inherit local configuration details (like certain
+  IP space you want to exempt from the blacklist, and other settings.
+
+* create a system to make the blacklist persistent across reboots - either make it part of
+  a persistent IPTABLES/IPSET configuration, or add commands to reset the blacklist when the system
+  reboots?
+
+* add additional/optional blacklists - eventually perhaps a more restrictive blacklist of rogue
+  IP space that should be blocked on http/s ports as well?
+
+* hear from the community, ways in which this can be improved
+
+- DP
+

@@ -1,0 +1,131 @@
+#!/bin/bash
+#
+#
+echo '###### Running: set-iptables.sh'
+echo '#'
+#########
+# Setups
+#
+# touch /var/log/kern.log
+# vi /etc/rsyslog.conf
+# add kern.*   /var/log/kern.log
+# systemctl restart rsyslog
+#
+#
+SET_NAME="login-shield"
+
+# Determine ports to block - Using the more restrictive methods will definitely interfere with
+# potentail legitimate traffic - best to use: SET_PORTS_NOLOGIN and if you are running any 
+# non-standard ports, add them there.  Note that I don't have port 23 (telnet) listed.  
+# That service has been replaced by ssh (22) - make sure you don't have telnet enabled or add that port too.
+#
+# blocks everything below + web - this could be an all ports drop too
+#
+# NOTE: Some versions limit port list to 15 entries!!
+#       If you're smart you have ssh on a port other than 22 so remove that
+#
+# NOWEB may not work (16 entries) depending upon your version of iptables
+SET_PORTS_NOWEB="20,21,22,25,80,110,143,443,465,587,989,990,993,994,995,4190"
+# blocks everything below + smtp
+SET_PORTS_NOMAIL="20,21,22,25,110,143,465,587,989,990,993,994,995,4190"
+# the above two settings will only work if you enable their value as the BLOCK_PORTS setting below
+
+# DEFAULT
+# blocks ssh,ftp,pop3,imap
+# [EDIT HERE]
+# UN-COMMENT and customize this one below if you have non-standard ssh or other ports you want to block - limit to 15 ports
+#SET_PORTS_NOLOGIN="20,21,22,110,143,587,989,990,993,994,995,4190"
+
+# port blocklist to use / if you want more restrictions you can also use SET_PORTS_NOMAIL and SET_PORTS_NOWEB
+BLOCK_PORTS=$SET_PORTS_NOLOGIN
+
+if [ -z $BLOCK_PORTS ]; then
+  echo "Block ports not specified - please edit this file and specify which ports to block before continuing."
+  exit;
+fi
+
+# ports
+# 20 - ftp-data
+# 21 - ftp
+# 22 - ssh
+# 23 - telnet (hopefully nobody is using this still)
+# 143 - imap (mail login port)
+# 993 - imaps (imap over SSL/TLS)
+# 994 - 
+# 995 - 
+# 4190 - Plesk Dovecot
+# 3659 - ?
+
+
+IPTABLES_WAIT=""
+if iptables --help | fgrep -q -- '--wait'; then
+  IPTABLES_WAIT="-w" # use --wait when iptables supports it
+fi
+
+if [[ $1 = @(del|delete|DELETE) ]]; then
+  PARM="del"
+else
+  PARM=""
+fi
+
+#echo "wait=" $IPTABLES_WAIT
+
+echo "######"
+echo "#"
+if [[ $PARM == "del" ]]; then
+  echo "#  This script will DISABLE the LOGIN-SHIELD IP blacklist via IPTABLES"
+else
+  echo "#  This script will enable the LOGIN-SHIELD IP blacklist via IPTABLES"
+fi
+echo "#"
+echo "# WARNING:  This can cause you to lose connectivity to your server if not properly configured!"
+echo "#"
+
+read -p "Continue (Y/n)?" CONT
+
+if [[ $CONT =~ ^(y|Y|$) ]]; then # this also accept ENTER, to default to No remove the |$
+  echo "Yes";
+
+
+# set which command/parameters for the blocking/logging
+
+# alternate (more cpu intensive) way of notifying them they've been rejected
+#IPTABLES_DROPTYPE="REJECT --reject-with icmp-host-prohibited"
+#IPTABLES_DROPTYPE="REJECT --reject-with icmp-port-unreachable"
+# default just drop
+IPTABLES_DROPTYPE="DROP"
+
+
+
+if [[ $PARM == "del" ]]; then
+
+  echo "DELETING IPTABLES rules using ipset blacklist: $SET_NAME for ports: $BLOCK_PORTS"
+
+  echo "iptables -D INPUT -p tcp --match multiport --dports $BLOCK_PORTS -m set --match-set $SET_NAME src -j $IPTABLES_DROPTYPE"
+  iptables -D INPUT -p tcp --match multiport --dports $BLOCK_PORTS -m set --match-set $SET_NAME src -j DROP
+
+  echo "iptables -D INPUT -p tcp --match multiport --dports $BLOCK_PORTS -m set --match-set $SET_NAME src -j LOG"
+  iptables -D INPUT -p tcp --match multiport --dports $BLOCK_PORTS -m set --match-set $SET_NAME src -j LOG
+
+else
+
+  echo "Setting IPTABLES using ipset blacklist: $SET_NAME for ports: $BLOCK_PORTS"
+  echo "iptables -I INPUT -p tcp --match multiport --dports $BLOCK_PORTS -m set --match-set $SET_NAME src -j $IPTABLES_DROPTYPE"
+
+  iptables -I INPUT -p tcp --match multiport --dports $BLOCK_PORTS -m set --match-set $SET_NAME src -j $IPTABLES_DROPTYPE
+
+  echo "iptables -I INPUT -p tcp --match multiport --dports $BLOCK_PORTS -m set --match-set $SET_NAME src -j LOG"
+  # optional command to LOG dropped connections via the kern.warning syslog service.  Comment out the iptables to disable
+  iptables -I INPUT -p tcp --match multiport --dports $BLOCK_PORTS -m set --match-set $SET_NAME src -j LOG
+
+fi
+
+
+else
+  echo "Operation Cancelled";
+  exit;
+fi
+
+
+echo '## Done.'
+

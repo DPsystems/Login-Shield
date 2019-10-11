@@ -1,0 +1,61 @@
+
+  _                 _             _____ _     _      _     _ 
+ | |               (_)           / ____| |   (_)    | |   | |
+ | |     ___   __ _ _ _ __ _____| (___ | |__  _  ___| | __| |
+ | |    / _ \ / _` | | '_ \______\___ \| '_ \| |/ _ \ |/ _` |
+ | |___| (_) | (_| | | | | |     ____) | | | | |  __/ | (_| |
+ |______\___/ \__, |_|_| |_|    |_____/|_| |_|_|\___|_|\__,_|
+               __/ |                                         
+              |___/         
+
+
+Your first line of defense against Internet bots, hacks and probes.
+
+by Dark Phiber, 2019 - dolson803@gmail.com
+
+# WHAT?
+# =====
+
+Login-Shield is a set of scripts that implements a traffic filter 
+of certain ports commonly probed for system credentials (ftp, ssh,
+smtp-auth, etc.).
+
+Our blacklist is intended to be a "wide sweep" IPv4-based blacklist
+of major groups of Internet locations that are notorious for housing
+the lion's share of compromised computers and servers.  This includes
+Chinese, Russian, Korean, South American and other areas.  
+
+This system can by used by itself or (ideally) in association with
+more precise anti-hacking systems like Fail2Ban.  With this large
+net in place, it reduces the resources Fail2Ban needs to only dealing
+with mostly local attacks from IP space you might not want to ban
+wholesale.
+
+# WHY?
+# ====
+
+Every time a site is compromised, there's a chance lists of usernames
+and passwords are leaked.  Hackers will take these lists and try to
+find other systems that use these same credentials. If they can gain
+access they can completely ruin your day (or year).  They will often
+try to login to e-mail clients, ftp accounts, ssh services, etc.  
+These system probes are now becoming even more sophisticated, and able
+to recognize Fail2Ban trigger conditions and work around them.  Our
+system stops approximately 90% of the attacks on most servers.
+
+# HOW?
+# ====
+
+Login shield is a very small set of IPTABLES rules that is designed
+to block certain ports on common servers, ports that can be used for
+user authentication (pop3, imap, ftp, ssh, smtp-auth, etc.)   This system
+does NOT by default interfere with web or standard mail delivery.
+It's mainly implemented to keep unauthorized IP space from being able
+to log in to your server.   Our system uses less than 20k of ram and
+is very effective in stopping a huge amount of malicious activity.  It 
+also will log attempts so you can monitor blocked traffic in case there
+is something legit you need to authorize.
+
+## See the file INSTALL for installation instructions
+
+## See the file VERSION for version and developer notes

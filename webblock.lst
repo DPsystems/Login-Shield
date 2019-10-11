@@ -1,0 +1,10 @@
+#
+# webblock.lst
+#
+# Known IP space of http/https attackers
+#
+#
+######
+# cypruss vps
+94.156.35.0/24
+

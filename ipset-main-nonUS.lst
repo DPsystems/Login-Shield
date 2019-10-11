@@ -1,0 +1,233 @@
+# ipset-main-nonUS.lst
+#
+# This is the main large-block IP space blacklist.
+# This list consists of non-US Class A IP blocks
+#
+#########
+# file format:
+# x.x.x.x/CIDR
+# ignores # and blank lines
+########
+# Additional notes on large IP blocks we monitor
+#
+# IP space we are not wholesale blacklisting right now:
+#
+#  38 - us psi.net
+#  40 - us microsoft
+#  47 - us, cn (alibaba)
+#  50 - comcast - us
+#  52 - microsoft - us
+#  54 - amazon and troublesome stuff
+#  66 - us hosting cari.net
+#  68 - us - cox
+#  70 - us - cox.net
+#  71 - us - verizon,windstream,etc
+#  72 - us - cox
+#  74 - us - google smtp
+#  99 - us - att
+# 104 - us - att
+# 140 - mixed us and china - blocks are in the C list
+# 131 - mixed us airforce and south america and elsewhere
+# 134 - ca, boeing, etc
+# 136 - mixed
+# 138 - mixed us
+# 144 - mixed us - military/defense contractors
+# 148 - microsoft plus chinese,pt,godaddy, etc. all over
+# 149 - 
+# 152 - mixed, us and cn
+# 155 - lots of us military but also AT&T
+# 157 - all over including facebook, defense contractors and foreign space
+# 159 - all over the place but also spots like ukraine
+# 161 - us, mixed, au, co, etc
+# 167 - us
+# 170 - us, corporations and some foreign
+# 151 - us, italy, africa, all over the place
+# 184 - us, cox cable
+# 192 - eu,africa,us
+# 209 - google mail (209.85.167.5,209.85.219.152,209.85.128.0/17 - imap/pop3)
+# 216 - us providers, cari.net
+#
+#
+# class a/8 b/16 c/24
+#
+###### BEGIN BLACKLIST
+#
+# 1 - cn,jp,kr,tw
+1.0.0.0/8
+# 2 - es,de,se,uk,it,etc - european ISPs
+2.0.0.0/8
+# 5 - ru,de,sa,kz,gb,li,tr etc
+5.0.0.0/8
+# 14 - kr,cn,vn,hk
+14.0.0.0/8
+# 27 - kr,in,cn
+27.0.0.0/8
+# 31 - ru,de,it,po,etc
+31.0.0.0/8
+# 36 cn
+36.0.0.0/8
+# 37 - ru,de,uk,eu etc
+37.0.0.0/8
+# 39 - cn,kr,id
+39.0.0.0/8
+# 40 - africa,eg,za,etc.
+41.0.0.0/8
+# 42 - vn,kr,cn
+42.0.0.0/8
+# 43 - cn,jp - UNKNOWN
+43.0.0.0/8
+# 46 ukraine
+46.0.0.0/8
+# 49 - cn,in,kr
+49.0.0.0/8
+# 51 - gb,fr **low priority**
+51.0.0.0/8
+# 54 - ca OVH hosting
+54.0.0.0/8
+#
+58.0.0.0/8
+59.0.0.0/8
+60.0.0.0/8
+# 61 - kr
+61.0.0.0/8
+# 62 - de,ru,eu
+62.0.0.0/8
+# 77 - uk,ru,de,eu
+77.0.0.0/8
+# 78 - it,ru,fr
+78.0.0.0/8
+# 79 - it,ru,de,nl,etc - lots of italy
+79.0.0.0/8
+# 80-81 - de,ru,fr,uk,gb
+80.0.0.0/8
+81.0.0.0/8
+# 82 - fr,gb,sa,kz, it - May interfere with TRIP in Nov
+82.0.0.0/8
+# 83 - po,es,nl,no etc
+83.0.0.0/8
+# 85 ru,de,ch,etc
+85.0.0.0/8
+# 87 - it,de,no, etc
+87.0.0.0/8
+# 88 - es,it,de,fr,pl,hu,etc
+88.0.0.0/8
+# 89 de,ro,ru,no,etc.
+89.0.0.0/8
+# 90 uk,fr
+90.0.0.0/8
+# 91 - de,fr
+91.0.0.0/8
+# 92 - ru,pt,uk,pl,eu
+92.0.0.0/8
+# 93 - fr,pt,rs,it,eu etc
+93.0.0.0/8
+# 94 - gb,it,ru,de,sa,etc.
+94.0.0.0/8
+# 95 - po,ru,it
+95.0.0.0/8
+# china, in,kr,id,hk
+101.0.0.0/8
+103.0.0.0/8
+106.0.0.0/8
+110.0.0.0/8
+111.0.0.0/8
+112.0.0.0/8
+113.0.0.0/8
+# 109 - gb,ru, lots of europe
+109.0.0.0/8
+# 114 cn,jp,kr
+114.0.0.0/8
+115.0.0.0/8
+# 116 - cn,kr,au
+116.0.0.0/8
+# 117 - cn,kr,in,tw
+117.0.0.0/8
+# 118-119 - jp,kr,tw,cn
+118.0.0.0/8
+119.0.0.0/8
+# 120-121 - cn
+120.0.0.0/8
+121.0.0.0/8
+# 122 - japan
+122.0.0.0/8
+# 123 - japan,kr
+123.0.0.0/8
+# 124 - kr,cn
+124.0.0.0/8
+# 125 - cn,au
+125.0.0.0/8
+# 105 - africa, egypt
+105.0.0.0/8
+# 154 - dedicated to africa but used by hong kong cloud hosting - large blocks appear to be un-allocated - possibly should blacklist
+154.0.0.0/8
+# 150 - jp,au
+150.0.0.0/8
+# 164 - eu,br, second half US military
+164.0.0.0/8
+# 171 - cn,de, europe
+171.0.0.0/8
+# 175 - cn
+175.0.0.0/8
+# 176 - de,ru,gb
+176.0.0.0/8
+# 177 - co,py,br,mx
+177.0.0.0/8
+# 178 - de,fr,uk,sa,ukraine, etc
+178.0.0.0/8
+# 179 - br,co
+179.0.0.0/8
+# 180 - jp,in
+180.0.0.0/8
+# 181 - ar,co
+181.0.0.0/8
+# 182 - cn,in,jp
+182.0.0.0/8
+183.0.0.0/8
+# 185 - ru,se,etc
+185.0.0.0/8
+# 186-187 - south america, br
+186.0.0.0/8
+187.0.0.0/8
+# 188 - numerous eu countries
+188.0.0.0/8
+# 189 - br,mx
+189.0.0.0/8
+# brazil
+190.0.0.0/8
+191.0.0.0/8
+# 193 - fr,fi,cz,ir,etc
+193.0.0.0/8
+# 194 fr
+194.0.0.0/8
+# 195 africa
+195.0.0.0/8
+# 196 eg,pk,za
+196.0.0.0/8
+# 197 africa,eg
+197.0.0.0/8
+# 200 br
+200.0.0.0/8
+# 201 br,hn,ar,mx
+201.0.0.0/8
+# 202 jp,pg,de, asia
+202.0.0.0/8
+# 203 au,th,kr,jp
+203.0.0.0/8
+# 210 cn,in,vn,jp
+210.0.0.0/8
+# 211 jp
+211.0.0.0/8
+# 212 gr,gb,cz
+212.0.0.0/8
+# 213 europe, amsterdam, nl, cz
+213.0.0.0/8
+# 217 de,ch,be, etc
+217.0.0.0/8
+# 218-219 cn,kr,jp
+218.0.0.0/8
+219.0.0.0/8
+# 222 cn,jp
+222.0.0.0/8
+# 223 cn
+223.0.0.0/8
+

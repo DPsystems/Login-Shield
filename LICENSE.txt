@@ -1,0 +1,9 @@
+This software, the scripts and data associated are licensed with the following terms:
+
+* Free for non-commercial use
+* Free for use in commercial environments
+
+You are free to use this for your use.  But if you wish to modify and redistribute this content in any form, that
+is restricted and must be negotiated with the license holder.
+
+

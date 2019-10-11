@@ -1,0 +1,110 @@
+
+
+  _                 _             _____ _     _      _     _ 
+ | |               (_)           / ____| |   (_)    | |   | |
+ | |     ___   __ _ _ _ __ _____| (___ | |__  _  ___| | __| |
+ | |    / _ \ / _` | | '_ \______\___ \| '_ \| |/ _ \ |/ _` |
+ | |___| (_) | (_| | | | | |     ____) | | | | |  __/ | (_| |
+ |______\___/ \__, |_|_| |_|    |_____/|_| |_|_|\___|_|\__,_|
+               __/ |                                         
+              |___/         
+
+
+Your first line of defense against Internet bots, hacks and probes.
+
+by Dark Phiber, 2019
+
+Installation Instructions
+=========================
+
+There are two basic parts to this system:
+
+1.  Setting up the blacklist
+2.  Enabling the blacklist
+
+For Part 1, there are several different shells scripts to run. 
+First there is a script to create the list, then there are several
+different scripts to add different types of IP ranges to the blacklist.
+
+For Part 2, there is a script to configure iptables (your server's 
+built in firewall) to act on the blacklist.  Part 2 is an ON/OFF switch.
+
+Dependencies:  Login-Shield uses IPTABLES and IPSET.  Make sure you have
+them installed on your system. (i.e. "apt-get ipset" or "yum install ipset")
+Iptables should be installed as part of most Linux base kernels.  There may
+be some modules that may need to be enabled that are beyond the scope of
+this document.
+
+To date, this system has been tested on: Centos7, Linux Mint
+
+E-mail me (dolson803@gmail.com) if you have tested it on other systems.
+
+Step 1: Set up the Blacklist
+============================
+
+Run 
+
+sudo ./create-blacklist.sh    # This creates the IPset list (does not enable it yet)
+
+Step 2: Edit and examine blacklist files
+========================================
+
+Then determine which IP blocks you're going to add to the list. 
+
+There are several differnet lists of IP addresses.  Pick the ones
+based on your particular configuration:
+
+ipset-main-nonUS.lst  - This is the main list which includes large, Class A blocks of non-US space
+ipset-others.lst      - This consists of smaller blocks of important bannable IP space in non-US areas
+ipset-proxies.lst     - This consists of specific blocks of TOR nodes and VPN services in US and abroad that are worthy of blocking
+ipset-US-hosting.lst  - This consists of US-based IP blocks that are mainly cloud hosting companies that often contain compromised systems.
+
+You should determine whether or not any systems you want to access (log in) to your server may reside in any of these IP spaces and 
+comment them out from the files.  (precede any IP line with a pound sign # and it will not be blacklisted)
+
+OPTIONAL:  If you're familiar with iptables you could add a rule after the blacklist to specifically whitelist IP spaces, but I
+           strongly recommend you examine each of the ipset*.lst files above and see if there are any netblocks that correspond
+           to IP space you or your clients may be using.
+
+NOTE: If you modify any of the .lst files (or any files), subsequent git pull commands will fail because of your local modifications.  I will
+      probably make this user-customization functionally less clunky in future releases.
+
+Step 3: Add the blacklists you want to use
+==========================================
+
+Each major blacklist has a corresponding shell file that adds those blocks to the login-shield blacklist.  Run any or
+all of the following scripts:
+
+sudo ./blacklist-main-nonUS.sh
+sudo ./blacklist-others.sh
+sudo ./blacklist-proxies.sh
+sudo ./blacklist-US-hosting.sh
+
+Each time you execute one of the above scripts, it will display how many IP blocks are added to the blacklist.   
+You can also add the parameter "del" to remove them if you want to un-do your efforts.
+
+Step 4: Edit the set-iptables.sh script
+=======================================
+
+Inside the script: set-iptables.sh  contains a number of commented-out lines that allow you to pick which ports you want to apply
+for the blacklist.  I've intentionally commented out the key port definition so the script cannot be run and executed until you edit
+it, just to be safe.
+
+Step 5: Enable the login-shield blacklist via Iptables
+======================================================
+
+Execute the script:
+sudo ./set-iptables.sh
+
+This will add the rules to LOG/DROP/REJECT the blacklisted IP ranges to the active iptables configuration.
+
+NOTE:  This is not persistent unless you make it persistent.
+
+You can also add the "del" parameter to disable the blacklist.  (Note that if you change any of the rule parameters after you've started the script, the delete
+command may fail and you may have to manually delete the rules using "iptables -L INPUT --line-numbers" and "iptables -D INPUT <rule#>"
+
+Future updates will probably make things easier to manage.
+
+Thanks for your support - and be sure to send any suggestions to dolson803@gmail.com
+
+- DP
