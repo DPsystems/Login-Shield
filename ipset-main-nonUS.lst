@@ -34,6 +34,7 @@
 # 144 - mixed us - military/defense contractors
 # 148 - microsoft plus chinese,pt,godaddy, etc. all over
 # 149 - 
+# 150 - mostly jp and au but there is some US space so won't BL/8
 # 152 - mixed, us and cn
 # 155 - lots of us military but also AT&T
 # 157 - all over including facebook, defense contractors and foreign space
@@ -160,8 +161,8 @@
 105.0.0.0/8
 # 154 - dedicated to africa but used by hong kong cloud hosting - large blocks appear to be un-allocated - possibly should blacklist
 154.0.0.0/8
-# 150 - jp,au
-150.0.0.0/8
+# 150 - jp,au - disabled because there is US space in here
+#150.0.0.0/8
 # 164 - eu,br, second half US military
 164.0.0.0/8
 # 171 - cn,de, europe
