@@ -1,0 +1,7 @@
+## Begin CHANGELOG.txt
+
+10/11/2019 - initial pushed version to GitHub
+
+10/16/2019 - Updated various lists including removal of 150/8 from the non-US list because it has US IP space in it
+
+## End
