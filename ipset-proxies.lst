@@ -2,6 +2,12 @@
 #
 # Known proxy servers - always a good idea to block
 #
+# us - ny - globalaxs
+45.152.180.0/24
+
+# us - ny - nordvpn
+107.172.0.0/14
+
 # us - ipvanish.com
 216.151.176.0/20
 

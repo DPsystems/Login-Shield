@@ -4,6 +4,15 @@
 # Before using, examine this file and ensure there are no IP blocks here that 
 # you may need to login to your server from!   Comment them out with #
 ######
+# us - tx serverhub dallas
+50.2.188.0/22
+
+# us - ca unified layer
+162.240.0.0/15
+
+
+# us - ga ramnode
+107.161.16.0/20
 
 # 64.69.208.0/20 - fl web.com
 64.69.208.0/20
@@ -61,6 +70,7 @@
 # US - colo crossing
 23.94.0.0/15
 192.227.128.0/17
+198.23.128.0/17
 
 # US - buyvm servers / frantech
 199.195.248.0/21
@@ -93,6 +103,7 @@
 104.236.0.0/16
 104.248.0.0/16
 128.199.0.0/16
+134.209.0.0/16
 138.68.0.0/16
 138.197.0.0/16
 139.59.0.0/16
@@ -107,6 +118,8 @@
 165.227.0.0/16
 167.71.0.0/16
 192.81.208.0/20
+192.241.128.0/17
+198.199.64.0/18
 198.211.96.0/19
 206.189.0.0/16
 209.97.0.0/16
@@ -124,6 +137,7 @@
 
 # US - host dime dimenoc
 138.128.160.0/19
+66.7.192.0/19
 
 # US - linode (cheap cloud servers)
 139.162.0.0/16
