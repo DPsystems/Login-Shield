@@ -4,6 +4,12 @@
 # Before using, examine this file and ensure there are no IP blocks here that 
 # you may need to login to your server from!   Comment them out with #
 ######
+# us - endurance marketing/hosting bluehost, hostgator, constantcontact
+209.59.192.0/19
+
+# us - liquidweb
+67.225.128.0/17
+
 # us - tx serverhub dallas
 50.2.188.0/22
 
@@ -102,6 +108,7 @@
 104.131.0.0/16
 104.236.0.0/16
 104.248.0.0/16
+107.170.0.0/16
 128.199.0.0/16
 134.209.0.0/16
 138.68.0.0/16
