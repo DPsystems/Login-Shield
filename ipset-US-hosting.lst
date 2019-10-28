@@ -4,6 +4,15 @@
 # Before using, examine this file and ensure there are no IP blocks here that 
 # you may need to login to your server from!   Comment them out with #
 ######
+# us - hostus.net nc
+162.245.216.0/21
+
+# us - it7.net
+107.182.184.0/21
+
+# us - hostway
+64.41.64.0/18
+
 # us - endurance marketing/hosting bluehost, hostgator, constantcontact
 209.59.192.0/19
 
