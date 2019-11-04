@@ -4,6 +4,12 @@
 # Before using, examine this file and ensure there are no IP blocks here that 
 # you may need to login to your server from!   Comment them out with #
 ######
+# us - hopone.net - poorly configured hosting isp
+66.235.160.0/19
+
+# us - seattle hostwinds
+23.238.0.0/17
+
 # us - hostus.net nc
 162.245.216.0/21
 
@@ -89,6 +95,7 @@
 198.23.128.0/17
 
 # US - buyvm servers / frantech
+198.98.48.0/20
 199.195.248.0/21
 205.185.112.0/20
 
@@ -142,6 +149,7 @@
 204.48.16.0/20
 206.81.0.0/19
 206.189.0.0/16
+207.154.192.0/18
 209.97.0.0/16
 
 # US - godaddy
