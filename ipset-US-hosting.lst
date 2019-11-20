@@ -4,6 +4,11 @@
 # Before using, examine this file and ensure there are no IP blocks here that 
 # you may need to login to your server from!   Comment them out with #
 ######
+
+# us - global frag servers layerhost
+23.247.0.0/17
+104.223.128.0/17
+
 # us - hopone.net - poorly configured hosting isp
 66.235.160.0/19
 
