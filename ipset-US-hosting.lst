@@ -14,6 +14,7 @@
 
 # us - seattle hostwinds
 23.238.0.0/17
+104.168.128.0/17
 
 # us - hostus.net nc
 162.245.216.0/21
@@ -190,7 +191,10 @@
 # actually 74.* is google's smtp - need more research to separate their cloud from gmail
 #34.64.0.0/10
 # US - google cloud customers - probably ok to ban?
-#35.184.0.0/13
-#35.192.0.0/12
+35.184.0.0/13
+35.192.0.0/12
+35.208.0.0/12
+35.240.0.0/13
+35.224.0.0/12
 
 #### End
