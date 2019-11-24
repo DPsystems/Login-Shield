@@ -4,6 +4,22 @@
 # Be sure to examine and comment out any systems you may use before running.
 #
 #######
+# ru and some others
+77.40.0.0/16
+
+# ua - servers
+46.28.64.0/21
+
+# ru
+5.35.64.0/18
+
+# cn - tencent cloud
+140.143.0.0/16
+
+# cn
+106.12.0.0/16
+106.13.0.0/16
+
 # it
 151.84.0.0/16
 
