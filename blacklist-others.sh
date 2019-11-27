@@ -4,6 +4,12 @@
 ####
 SET_NAME=login-shield
 FILE="./ipset-others.lst"
+ALTFILE="./ipset-others.me"
+
+if [[ -f "$ALTFILE" ]]; then
+  FILE=$ALTFILE
+  echo "Using custom list: $FILE"
+fi
 
 if [[ $1 = @(del|delete|DELETE) ]]; then
   PARM="del"

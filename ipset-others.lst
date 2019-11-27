@@ -1,9 +1,21 @@
-# ipset-others.lst
+# Source: ipset-others.lst
 #
 # List of non-US networks that are often compromised or used as botnets.
 # Be sure to examine and comment out any systems you may use before running.
 #
 #######
+# ir,fr,ukraine
+86.64.0.0/12
+
+# cn,id
+45.249.0.0/16
+
+# jm,ky - Jamaica/Grand Cayman
+66.249.144.0/20
+
+# jp,vn
+150.95.0.0/16
+
 # ru and some others
 77.40.0.0/16
 

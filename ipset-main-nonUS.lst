@@ -1,4 +1,4 @@
-# ipset-main-nonUS.lst
+# Source: ipset-main-nonUS.lst
 #
 # This is the main large-block IP space blacklist.
 # This list consists of non-US Class A IP blocks

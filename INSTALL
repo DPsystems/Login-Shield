@@ -59,6 +59,10 @@ ipset-others.lst      - This consists of smaller blocks of important bannable IP
 ipset-proxies.lst     - This consists of specific blocks of TOR nodes and VPN services in US and abroad that are worthy of blocking
 ipset-US-hosting.lst  - This consists of US-based IP blocks that are mainly cloud hosting companies that often contain compromised systems.
 
+CUSTOMIZING:  To customize any of the included blacklists, copy the file to another file of the same name, but with .me as the extension. 
+              The system will use that file over the .lst file.  This way you can pull new updates without overwriting any customization.
+              Repeat the process if you wish to use newer blacklist files but have custom rules - copy to *.me and edit.
+
 You should determine whether or not any systems you want to access (log in) to your server may reside in any of these IP spaces and 
 comment them out from the files.  (precede any IP line with a pound sign # and it will not be blacklisted)
 
@@ -66,8 +70,7 @@ OPTIONAL:  If you're familiar with iptables you could add a rule after the black
            strongly recommend you examine each of the ipset*.lst files above and see if there are any netblocks that correspond
            to IP space you or your clients may be using.
 
-NOTE: If you modify any of the .lst files (or any files), subsequent git pull commands will fail because of your local modifications.  I will
-      probably make this user-customization functionally less clunky in future releases.
+NOTE: If you modify any of the .lst files (or any files), subsequent git pull commands will fail because of your local modifications.
 
 Step 3: Add the blacklists you want to use
 ==========================================

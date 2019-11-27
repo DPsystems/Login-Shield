@@ -1,9 +1,17 @@
 #!/bin/bash
 #
-#
+# (c) 2019, DPSystems
 ####
 SET_NAME=login-shield
 FILE="./ipset-main-nonUS.lst"
+
+ALTFILE="./ipset-main-nonUS.me"
+
+if [[ -f "$ALTFILE" ]]; then
+  FILE=$ALTFILE
+  echo "Using custom list: $FILE"
+fi
+
 
 if [[ $1 = @(del|delete|DELETE) ]]; then
   PARM="del"
