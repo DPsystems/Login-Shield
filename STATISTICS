@@ -1,0 +1,47 @@
+
+
+  _                 _             _____ _     _      _     _ 
+ | |               (_)           / ____| |   (_)    | |   | |
+ | |     ___   __ _ _ _ __ _____| (___ | |__  _  ___| | __| |
+ | |    / _ \ / _` | | '_ \______\___ \| '_ \| |/ _ \ |/ _` |
+ | |___| (_) | (_| | | | | |     ____) | | | | |  __/ | (_| |
+ |______\___/ \__, |_|_| |_|    |_____/|_| |_|_|\___|_|\__,_|
+               __/ |                                         
+              |___/         
+
+
+Your first line of defense against Internet bots, hacks and probes.
+
+A great stand alone filter, or compliment to the wonderful active 
+firewall: Fail2Ban, that will make F2B even more efficient.
+
+by Dark Phiber, 2019 - dolson803@gmail.com
+
+# SAMPLE USAGE STATISTICS
+# =======================
+
+This blacklist is the result of more than a decade of analysis and combatting system hacks/attacks/probes.
+
+It's by no means a complete solution, but it part of a "system" that includes more precise targetting like
+Fail2Ban.   
+
+I've been running this across multiple servers and here are some of the more recent statistics:
+
+Web Server, operating since 1996 in various forms with both old and new domains, hosting 50+ web sites:
+
+Log analysis of hack/attack activity and Login-Shield effectiveness:
+
+Start           End               Days  Attacks  Blocked  Total  #/day    % attacks blocked
+-------------------------------------------------------------------------------------------
+Nov 17 3:32:03	Nov 27 10:10:01   10	62	 7981	  8043	 804      99.23%
+
+Mail server:
+
+Start           End               Days  Attacks  Blocked  Total  #/day    % attacks blocked
+-------------------------------------------------------------------------------------------
+Nov 17 3:31:05	Nov 27 10:07:53   10	2374	 35287	  37661	 3766	  93.70%	includes time period where filter was turned off	
+
+
+In future releases I will include the scripts I use to analyze log files and generate statistics like this.
+
+
