@@ -1,7 +1,11 @@
 ## Begin CHANGELOG.txt
 
-10/11/2019 - initial pushed version to GitHub
+11/27/2019 - Added support for customized blacklists (*.me) and changed set-iptables.sh to set-iptables.sh-config to allow pull requests to
+             not overwrite user customization, also updated INSTALL file
 
 10/16/2019 - Updated various lists including removal of 150/8 from the non-US list because it has US IP space in it
+
+10/11/2019 - initial pushed version to GitHub
+
 
 ## End
