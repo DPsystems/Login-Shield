@@ -17,6 +17,12 @@ firewall: Fail2Ban, that will make F2B even more efficient.
 
 by Dark Phiber, 2019 - dolson803@gmail.com
 
+# STAT SCRIPT
+= ===========
+
+The shell script count_logins.sh will display stats showing start/end date of logfiles and the count of failed logins verses blocked logins.
+Edit the script to show the location and details of your log files if they differ from what's on file (from CentOS 7)
+
 # SAMPLE USAGE STATISTICS
 # =======================
 
