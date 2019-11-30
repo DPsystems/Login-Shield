@@ -1,8 +1,8 @@
 #!/bin/bash
 #
-# This script
+# This script compiles stats from the logfiles on attacks and blocks 
+# (assuming you added the rule to log iptables blocks for login-shield)
 #
-# filespec of logfile containing blacklist entries from kernel (assuming you added the rule to log iptables blocks for login-shield)
 BL_LOGFILE=/var/log/messages
 # keyword we're grep'ing to ID a blocked hack attempt
 BL_GREP="WINDOW"
