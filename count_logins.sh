@@ -11,15 +11,39 @@ AUTH_LOGFILE=/var/log/secure
 # keyword we're grep'ing to ID an auth attemp
 AUTH_GREP="authentication failure"
 
-
-echo "Number of login failures in log files: "
-cat $AUTH_LOGFILE | grep -i "$AUTH_GREP" | wc -l
+echo '  _                 _             _____ _     _      _     _'
+echo ' | |               (_)           / ____| |   (_)    | |   | |'
+echo ' | |     ___   __ _ _ _ __ _____| (___ | |__  _  ___| | __| |'
+echo ' | |    / _ \ / _` | | ^_ \______\___ \|  _ \| |/ _ \ |/ _` |'
+echo ' | |___| (_) | (_| | | | | |     ____) | | | | |  __/ | (_| |'
+echo ' |______\___/ \__, |_|_| |_|    |_____/|_| |_|_|\___|_|\__,_|'
+echo '               __/ |'
+echo '              |___/'
+echo '============= Login-Shield Statistics based on current log files ==========='
+echo " Using: $BL_LOGFILE and $AUTH_LOGFILE"
+FAILS=`cat $AUTH_LOGFILE | grep -i "$AUTH_GREP" | wc -l`
+echo "-- Number of login failures in log files: $FAILS"
+echo -n "Start: "
 head -n 1 /var/log/secure
+echo -n "End  : "
 tail -n 1 /var/log/secure
 echo "===================================== "
-echo "Number of filtered connections: "
-cat $BL_LOGFILE | grep -i $BL_GREP | wc -l
+BLOCKS=`cat $BL_LOGFILE | grep -i $BL_GREP | wc -l`
+echo "--        Number of filtered connections: $BLOCKS"
+echo -n "Start: "
 head -n 1 /var/log/messages
+echo -n "End  : "
 tail -n 1 /var/log/messages
+echo "============================================================================"
+TOTAL=`expr $FAILS + $BLOCKS`
+UNCAUGHTPCT=`awk "BEGIN { print $FAILS / $TOTAL }"`
+CAUGHTPCT=`awk "BEGIN { print 100 - $UNCAUGHTPCT }"`
+
+echo "Total system attacks: $TOTAL"
+echo "Blocked attempts    : $BLOCKS"
+echo "Attacks got through : $FAILS"
+echo "---------------------------------"
+echo "% Of Attacks Blocked: $CAUGHTPCT% "
+echo "============================================================================"
 
 
