@@ -4,6 +4,9 @@
 # Before using, examine this file and ensure there are no IP blocks here that 
 # you may need to login to your server from!   Comment them out with #
 ######
+# us - ibm softlayer
+52.116.0.0/15
+52.118.0.0/16
 
 # us - wholesale internet
 69.30.192.0/18
