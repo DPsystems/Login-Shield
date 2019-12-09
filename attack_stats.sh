@@ -36,8 +36,22 @@ sort temp2b.txt | uniq -c > temp3b.txt
 sort -r -n temp3b.txt > ip_rankings.txt
 
 UNIQUE_IPS=`cat ip_rankings.txt | wc -l`
+
+TOP5=`head -n 5 ip_rankings.txt | awk '{s+=$1} END {printf "%.0f", s}'`
+TOP5PCT=`awk "BEGIN { printf \"%.1f\", $TOP5 / $FAILS * 100 }"`
+
+TOP10=`head -n 10 ip_rankings.txt | awk '{s+=$1} END {printf "%.0f", s}'`
+TOP10PCT=`awk "BEGIN { printf \"%.1f\", $TOP10 / $FAILS * 100 }"`
+
+TOP50=`head -n 50 ip_rankings.txt | awk '{s+=$1} END {printf "%.0f", s}'`
+TOP50PCT=`awk "BEGIN { printf \"%.1f\", $TOP50 / $FAILS * 100 }"`
+
 echo "-- Number of unique IP addresses attacking : $UNIQUE_IPS"
 echo 
+echo "   Percentage of attacks from top 50 IPs   : $TOP50PCT%"
+echo "   Percentage of attacks from top 10 IPs   : $TOP10PCT%"
+echo "   Percentage of attacks from top 5 IPs    : $TOP5PCT%"
+echo
 echo "      Top 20:"
 echo "Attacks:  IP Address:"
 echo "---------------------"
