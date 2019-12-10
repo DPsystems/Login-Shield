@@ -19,19 +19,19 @@ echo '              |___/'
 echo '======= Attack Statistics based on current log files ======='
 echo " Using: $BL_LOGFILE"
 echo
-START=`head -n 1 $BL_LOGFILE | cut -d ' ' -f 1-4`
+START=`head -n 1 $BL_LOGFILE | tr -s ' ' | cut -d ' ' -f 1-3`
 echo "From: $START"
-END=`tail -n 1 $BL_LOGFILE | cut -d ' ' -f 1-4`
+END=`tail -n 1 $BL_LOGFILE | tr -s ' ' | cut -d ' ' -f 1-3`
 echo "To  : $END"
 echo
 
-cat $BL_LOGFILE  | grep -i "$BL_GREP" > temp.txt
+cat $BL_LOGFILE  | grep -i "$BL_GREP" | tr -s ' ' > temp.txt
 FAILS=`cat temp.txt | wc -l`
 
 echo "-- Number of blocked attacks in log files  : $FAILS"
 
 # version without ports
-cat temp.txt  | cut -d ' ' -f 10 | sed -e 's/SRC=//g' | sed -e 's/DPT=//g' | sed -e 's/ /:/g' > temp2b.txt
+cat temp.txt  | cut -d ' ' -f 9 | sed -e 's/SRC=//g' | sed -e 's/DPT=//g' | sed -e 's/ /:/g' > temp2b.txt
 sort temp2b.txt | uniq -c > temp3b.txt
 sort -r -n temp3b.txt > ip_rankings.txt
 
