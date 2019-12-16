@@ -110,6 +110,15 @@ command may fail and you may have to manually delete the rules using "iptables -
 
 Future updates will probably make things easier to manage.
 
+
+Additional Info & Statistics
+============================
+
+Once setup, there are a few scripts to generate stats on the system activity. 
+See the file STATISTICS for more info.
+
+
+
 Thanks for your support - and be sure to send any suggestions to dolson803@gmail.com
 
 - DP

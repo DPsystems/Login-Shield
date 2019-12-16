@@ -23,6 +23,10 @@ by Dark Phiber, 2019 - dolson803@gmail.com
 The shell script count_logins.sh will display stats showing start/end date of logfiles and the count of failed logins verses blocked logins.
 Edit the script to show the location and details of your log files if they differ from what's on file (from CentOS 7)
 
+The shell script attack_stats.sh will show you the top attackers by IP and breakdown of how many IPs verses how many attack attempts.
+If you use the parameter "lookup" when running attack_stats.sh it will query WHOIS and display the country on file with the top 20
+most aggressive attack sources.
+
 # SAMPLE USAGE STATISTICS
 # =======================
 
@@ -40,14 +44,60 @@ Log analysis of hack/attack activity and Login-Shield effectiveness:
 Start           End               Days  Attacks  Blocked  Total  #/day    % attacks blocked
 -------------------------------------------------------------------------------------------
 Nov 17 3:32:03	Nov 27 10:10:01   10	62	 7981	  8043	 804      99.23%
+Dec  1 03:24:02 Dec 16 10:50:01   15	25	 9235	  9260   617      99.73%
 
 Mail server:
 
 Start           End               Days  Attacks  Blocked  Total  #/day    % attacks blocked
 -------------------------------------------------------------------------------------------
 Nov 17 3:31:05	Nov 27 10:07:53   10	2374	 35287	  37661	 3766	  93.70%	includes time period where filter was turned off	
+Dec 2 3:18:26	Dec 16 10:54:01	  14	473	121571	 122044	 8717	  99.61%
 
 
 In future releases I will include the scripts I use to analyze log files and generate statistics like this.
+
+# EXAMPLE REPORTS
+= ===============
+
+There are several shell scripts which will compile and display real/time reports on attack activity.  Here is an example:
+
+ | |               (_)           / ____| |   (_)    | |   | |
+ | |     ___   __ _ _ _ __ _____| (___ | |__  _  ___| | __| |
+ | |    / _ \ / _` | | ^_ \______\___ \|  _ \| |/ _ \ |/ _` |
+ | |___| (_) | (_| | | | | |     ____) | | | | |  __/ | (_| |
+ |______\___/ \__, |_|_| |_|    |_____/|_| |_|_|\___|_|\__,_|
+               __/ |
+              |___/
+======= Attack Statistics based on current log files =======
+ Using: /var/log/messages
+
+From: Dec 1 03:24:02
+To  : Dec 16 10:45:01
+
+-- Number of blocked attacks in log files  : 9229
+-- Number of unique IP addresses attacking : 1275
+   Average # of attacks per IP             : 7
+   Percentage of attacks from top 50 IPs   : 33.6%
+   Percentage of attacks from top 10 IPs   : 15.3%
+   Percentage of attacks from top 5 IPs    : 10.3%
+
+      Top 20:
+Attacks:  IP Address:
+---------------------
+    388 77.40.61.229
+    200 77.40.113.15
+    144 185.80.129.252
+    117 37.214.97.109
+    105 18.203.224.27
+    104 37.59.24.177
+     90 45.82.153.140
+     90 3.8.238.244
+     90 193.188.22.229
+     88 185.80.128.158
+     86 193.188.22.188
+     84 45.227.253.212
+     81 194.226.144.44
+     80 185.80.130.238
+     ...
 
 

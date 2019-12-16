@@ -3,6 +3,7 @@
 # Script to analyze login-shield blocked attack attemps and generate
 # statistics identifying the most aggressive sources of attacks
 #
+# OPTIONAL: add parameter "lookup" to display country associated with top attacks
 
 # filespec of logfile containing invalid login attempts
 BL_LOGFILE=/var/log/messages
@@ -53,8 +54,28 @@ echo "   Percentage of attacks from top 50 IPs   : $TOP50PCT%"
 echo "   Percentage of attacks from top 10 IPs   : $TOP10PCT%"
 echo "   Percentage of attacks from top 5 IPs    : $TOP5PCT%"
 echo
-echo "      Top 20:"
-echo "Attacks:  IP Address:"
-echo "---------------------"
-head -n 20 ip_rankings.txt
 
+COUNT=20
+echo "      Top $COUNT:"
+
+if [ "$1" == "lookup" ]; then
+
+echo "Attacks:  IP Address:  Country:"
+echo "-------------------------------"
+IFS=''
+head -n $COUNT ip_rankings.txt | while read line
+do
+        echo -n $line
+        IP=`echo $line | tr -s ' ' | cut -d ' ' -f 3`
+        COUNTRY_LINE=`whois $IP | grep -m 1 'country:'`
+        COUNTRY=`echo $COUNTRY_LINE | tr -s ' ' | cut -d ' ' -f 2`
+        echo -e -n '\t'
+        echo "$COUNTRY"
+
+done
+
+else
+	echo "Attacks:  IP Address:"
+	echo "---------------------"
+	head -n $COUNT ip_rankings.txt
+fi
