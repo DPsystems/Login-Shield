@@ -4,6 +4,9 @@
 # Before using, examine this file and ensure there are no IP blocks here that 
 # you may need to login to your server from!   Comment them out with #
 ######
+# us - nj choopa dedicated servers
+45.76.0.0/15
+
 # us - pa 1and1.com ionos oneandone.net
 108.175.0.0/20
 
