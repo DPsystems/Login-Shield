@@ -67,7 +67,7 @@ head -n $COUNT ip_rankings.txt | while read line
 do
         echo -n $line
         IP=`echo $line | tr -s ' ' | cut -d ' ' -f 3`
-        COUNTRY_LINE=`whois $IP | grep -m 1 'country:'`
+        COUNTRY_LINE=`whois $IP | grep -i -m 1 'country:'`
         COUNTRY=`echo $COUNTRY_LINE | tr -s ' ' | cut -d ' ' -f 2`
         echo -e -n '\t'
         echo "$COUNTRY"
