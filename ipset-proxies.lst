@@ -2,6 +2,9 @@
 #
 # Known proxy servers - always a good idea to block
 #
+# us - rackweb vps - bulgeria
+78.128.113.0/24
+
 # us - ny - globalaxs
 45.152.180.0/24
 
