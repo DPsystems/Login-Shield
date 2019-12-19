@@ -4,6 +4,20 @@
 # Be sure to examine and comment out any systems you may use before running.
 #
 #######
+# ru - dynamic broadband
+128.71.0.0/16
+
+# eg - telecom egypt - tedata.net
+102.40.0.0/16
+156.196.0.0/15
+156.212.0.0/15
+
+# do
+148.255.0.0/16
+
+# th - internet
+184.82.0.0/16
+
 # id - internet
 139.255.0.0/16
 

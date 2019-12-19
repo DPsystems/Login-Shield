@@ -4,6 +4,12 @@
 # Before using, examine this file and ensure there are no IP blocks here that 
 # you may need to login to your server from!   Comment them out with #
 ######
+# us - nc - threat research group (ha)
+208.97.31.128/25
+
+# us - colo up
+162.223.88.0/21
+
 # us - nj choopa dedicated servers
 45.76.0.0/15
 
@@ -109,6 +115,7 @@
 
 # US - colo crossing
 23.94.0.0/15
+192.3.0.0/16
 192.227.128.0/17
 198.23.128.0/17
 
