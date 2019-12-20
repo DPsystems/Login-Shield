@@ -4,6 +4,9 @@
 # Be sure to examine and comment out any systems you may use before running.
 #
 #######
+# jp - open cloud network
+153.149.0.0/17
+
 # ru - dynamic broadband
 128.71.0.0/16
 
