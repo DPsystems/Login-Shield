@@ -4,6 +4,9 @@
 # Before using, examine this file and ensure there are no IP blocks here that 
 # you may need to login to your server from!   Comment them out with #
 ######
+# us - it7 networks vps hosting
+144.34.128.0/17
+
 # us - nc - threat research group (ha)
 208.97.31.128/25
 

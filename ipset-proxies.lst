@@ -2,6 +2,9 @@
 #
 # Known proxy servers - always a good idea to block
 #
+# us - vps inmotion hosting
+199.250.192.0/19
+
 # us - rackweb vps - bulgeria
 78.128.113.0/24
 
