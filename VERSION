@@ -1,10 +1,9 @@
 # VERSION HISTORY
 # ===============
 
-Version 0.02b - 2019-11 - Updates to allow git pull to not overwrite user customization
-
-
 Version 0.01b - 2019-10 - Initial public committed version
+
+        0.02b - 2019-12 - More updates, improved attack_statistics.sh to more accurately retrieve country source
 
 # DEVELOPER NOTES
 # ===============
