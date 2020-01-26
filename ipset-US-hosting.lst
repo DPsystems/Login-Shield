@@ -4,6 +4,13 @@
 # Before using, examine this file and ensure there are no IP blocks here that 
 # you may need to login to your server from!   Comment them out with #
 ######
+# us - shadow server foundation
+74.82.47.0/26
+184.105.139.64/26
+
+# us - dreamhost
+67.205.56.0/21
+
 # us - it7 networks vps hosting
 144.34.128.0/17
 
@@ -121,6 +128,7 @@
 192.3.0.0/16
 192.227.128.0/17
 198.23.128.0/17
+198.144.176.0/20
 
 # US - buyvm servers / frantech
 198.98.48.0/20

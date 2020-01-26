@@ -80,6 +80,8 @@
 43.0.0.0/8
 # 46 ukraine
 46.0.0.0/8
+# cn
+47.92.0.0/14
 # 49 - cn,in,kr
 49.0.0.0/8
 # 51 - gb,fr **low priority**
@@ -102,6 +104,7 @@
 79.0.0.0/8
 # 80-81 - de,ru,fr,uk,gb
 80.0.0.0/8
+# 81 also includes some vpns 81.171.72.0/21
 81.0.0.0/8
 # 82 - fr,gb,sa,kz, it - May interfere with TRIP in Nov
 82.0.0.0/8

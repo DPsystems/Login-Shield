@@ -2,6 +2,9 @@
 #
 # Known proxy servers - always a good idea to block
 #
+# us - ipvanish
+64.145.94.0/24
+
 # us - vps inmotion hosting
 199.250.192.0/19
 
