@@ -37,7 +37,7 @@ tail -n 1 /var/log/messages
 echo "============================================================================"
 TOTAL=`expr $FAILS + $BLOCKS`
 UNCAUGHTPCT=`awk "BEGIN { print $FAILS / $TOTAL }"`
-CAUGHTPCT=`awk "BEGIN { print 100 - $UNCAUGHTPCT }"`
+CAUGHTPCT=`awk "BEGIN { print 100 - (100*$UNCAUGHTPCT) }"`
 
 echo "Total system attacks: $TOTAL"
 echo "Blocked attempts    : $BLOCKS"

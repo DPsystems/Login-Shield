@@ -7,5 +7,6 @@
 
 10/11/2019 - initial pushed version to GitHub
 
+01/20/2020 - fixed minor glitch in ./count_logins.sh showing error in % attacks blocked
 
 ## End
