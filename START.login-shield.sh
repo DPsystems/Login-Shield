@@ -1,8 +1,8 @@
-#!/bin/bash
 # Rename this to S.login-shield.sh after customizing
+# run as root
 #
 # specify the location of your login shield installation
-PATH=/www/ban/mp-bl
+PATH=/path-to-your/installation
 #
 #
 cd $PATH

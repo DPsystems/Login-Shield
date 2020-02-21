@@ -1,4 +1,3 @@
-#!/bin/bash
 #
 # (c) 2019, DPSystems
 ####
