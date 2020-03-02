@@ -2,6 +2,10 @@
 #
 # Known proxy servers - always a good idea to block
 #
+# secure internet llc - proxies/vpns
+172.94.84.0/24
+104.250.172.0/24
+
 # us - ipvanish
 64.145.94.0/24
 

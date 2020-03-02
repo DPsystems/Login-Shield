@@ -4,6 +4,12 @@
 # Before using, examine this file and ensure there are no IP blocks here that 
 # you may need to login to your server from!   Comment them out with #
 ######
+# us - linode
+72.14.176.0/20
+
+# us - secure internet llc - system probes - vpn https://scamalytics.com/ip/isp/secure-internet-llc
+172.111.128.0/17
+
 # us - shadow server foundation
 74.82.47.0/26
 184.105.139.64/26
@@ -20,8 +26,11 @@
 # us - colo up
 162.223.88.0/21
 
-# us - nj choopa dedicated servers
+# us - nj choopa/vultr dedicated servers 
+45.63.0.0/17
 45.76.0.0/15
+207.246.64.0/18
+144.202.62.0/23
 
 # us - pa 1and1.com ionos oneandone.net
 108.175.0.0/20
