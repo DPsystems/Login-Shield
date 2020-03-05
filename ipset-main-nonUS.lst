@@ -82,6 +82,8 @@
 46.0.0.0/8
 # cn
 47.92.0.0/14
+# cn alibaba cloud
+47.104.0.0/13
 # 49 - cn,in,kr
 49.0.0.0/8
 # 51 - gb,fr **low priority**

@@ -29,8 +29,10 @@
 # us - nj choopa/vultr dedicated servers 
 45.63.0.0/17
 45.76.0.0/15
+104.207.158.0/23
 207.246.64.0/18
 144.202.62.0/23
+149.28.206.0/23
 
 # us - pa 1and1.com ionos oneandone.net
 108.175.0.0/20
