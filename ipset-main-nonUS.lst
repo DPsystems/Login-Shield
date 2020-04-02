@@ -28,6 +28,7 @@
 #  99 - us - att
 # 104 - us - att
 # 140 - mixed us and china - blocks are in the C list
+# 129 - us, africa, etc
 # 131 - mixed us airforce and south america and elsewhere
 # 134 - ca, boeing, etc
 # 136 - mixed
@@ -239,4 +240,6 @@
 222.0.0.0/8
 # 223 cn
 223.0.0.0/8
+# africa/nigeria
+129.205.0.0/16
 
