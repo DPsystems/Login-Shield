@@ -13,6 +13,9 @@
 # ru - dynamic broadband
 128.71.0.0/16
 
+# ru - gas-net
+84.38.0.0/22
+
 # eg - telecom egypt - tedata.net
 102.40.0.0/16
 156.196.0.0/15
