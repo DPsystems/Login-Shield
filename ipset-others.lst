@@ -87,6 +87,7 @@
 159.253.0.0/16
 
 # za - africa
+168.128.0.0/16
 155.93.0.0/16
 
 # jp - vultr cloud
@@ -209,10 +210,14 @@
 
 # kr
 128.134.0.0/16
+152.99.0.0/16
 
 # european systems including ukraine and above proxy services
 141.98.0.0/16
 #
+
+# kr,in,vn,au
+45.120.0.0/16
 
 # cn - cloud computing
 148.70.0.0/16
