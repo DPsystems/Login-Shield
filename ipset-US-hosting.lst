@@ -4,6 +4,9 @@
 # Before using, examine this file and ensure there are no IP blocks here that 
 # you may need to login to your server from!   Comment them out with #
 ######
+# us - webhostbox.net
+162.251.80.0/24
+
 # us - linode
 72.14.176.0/20
 
@@ -69,6 +72,7 @@
 
 # us - liquidweb
 67.225.128.0/17
+207.246.240.0/20
 
 # us - tx serverhub dallas
 50.2.188.0/22
