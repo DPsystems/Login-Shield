@@ -110,6 +110,25 @@ command may fail and you may have to manually delete the rules using "iptables -
 
 Future updates will probably make things easier to manage.
 
+Other steps: How to handle updates
+==================================
+
+If you want to set up login-shield to run automatically at boot time, that's beyond the scope of this guide.  But it's obviously not terribly difficult to do.
+
+However, I will go into certain scenarios on how to update/maintain your login-shield system.
+
+* Updates to firewalld/iptables 
+
+If there are updates to core systems upon which Login-Shield relies, you may have to re-load the firewall/iptables rules.  For example if firewalld/iptables gets updated, when it restarts, if you haven't made provisions to re-enable login-shield, then you'll want to run the set-iptables.sh script - basically you can re-run this if there's been an update and the firewall should be back in place.   
+
+Likewise if there's an update to ipset, it may not save the ipset list, and you'll want to re-run those scripts to re-initialized the list.
+
+* Updates to Login-Shield
+
+The most common updates to Login-Shield are going to be changes to the blacklist files.  To update the blacklists, regularly run "git pull" from the Login-Shield root installation.
+
+To add new rules, simply re-run the ./blacklist-****.sh files.  Existing rules will be ignored and new rules will be added.   It is possible I may have removed some IP blacklists, but much more likely I simply added more.  I have yet to remove IP entries yet - but I do keep adding more large networks.  If I do remove some, I'll probably include a note to that effect in the update.
+
 
 Additional Info & Statistics
 ============================
