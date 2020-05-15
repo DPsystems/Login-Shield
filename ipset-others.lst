@@ -3,6 +3,12 @@
 # List of non-US networks that are often compromised or used as botnets.
 # Be sure to examine and comment out any systems you may use before running.
 #
+# br - telecom
+168.181.0.0/16
+
+# se - vpn
+185.213.155.0/24
+
 #######
 # hu telecom
 84.2.0.0/15

@@ -34,6 +34,7 @@
 # 136 - mixed
 # 138 - mixed us
 # 144 - mixed us - military/defense contractors
+# 146 - mixed us - military, us hosting (digital ocean) and russia
 # 148 - microsoft plus chinese,pt,godaddy, etc. all over
 # 149 - mixed, alibaba, cn
 # 150 - mostly jp and au but there is some US space so won't BL/8
@@ -43,6 +44,7 @@
 # 159 - all over the place but also spots like ukraine
 # 161 - us, mixed, au, co, etc
 # 167 - us
+# 168 - us, br and others
 # 170 - us, corporations and some foreign
 # 151 - us, italy, africa, all over the place
 # 184 - us, cox cable
