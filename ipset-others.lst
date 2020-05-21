@@ -3,6 +3,9 @@
 # List of non-US networks that are often compromised or used as botnets.
 # Be sure to examine and comment out any systems you may use before running.
 #
+# africa - botswanna
+168.167.0.0/16
+
 # br - telecom
 168.181.0.0/16
 
@@ -354,6 +357,8 @@
 155.4.0.0/16
 # poland
 157.25.0.0/16
+151.248.56.0/21
+
 # uk
 159.224.0.0/16
 # nl isp
