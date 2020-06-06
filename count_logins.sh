@@ -5,7 +5,13 @@
 #
 BL_LOGFILE=/var/log/messages
 # keyword we're grep'ing to ID a blocked hack attempt
-BL_GREP="WINDOW"
+#BL_GREP="WINDOW"
+# New grep versions as of v 0.10b
+# all *-shield blacklists
+BL_GREP="ShD-"
+
+
+
 # filespec of logfile containing invalid login attempts
 AUTH_LOGFILE=/var/log/secure
 # keyword we're grep'ing to ID an auth attemp

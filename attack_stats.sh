@@ -7,7 +7,10 @@
 
 # filespec of logfile containing invalid login attempts
 BL_LOGFILE=/var/log/messages
-BL_GREP="WINDOW"
+# New grep versions as of v 0.10b
+#BL_GREP="WINDOW"
+# all *-shield blacklists
+BL_GREP="ShD-"
 
 echo '  _                 _             _____ _     _      _     _'
 echo ' | |               (_)           / ____| |   (_)    | |   | |'

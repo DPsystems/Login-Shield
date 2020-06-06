@@ -1,5 +1,7 @@
 ##!/bin/bash
 #
+# NOTE: Changes to this file as of v0.10b mean you need to use the older file to delete the rules if you don't do them manually
+#
 # Source: set-iptables.sh-config / rename and run to enable blacklist
 #
 echo '###### Running: set-iptables.sh'
@@ -14,6 +16,9 @@ echo '#'
 #
 #
 SET_NAME="login-shield"
+
+# prefix for log files
+LOG_PREFIX="ShD-Lgn"
 
 # Determine ports to block - Using the more restrictive methods will definitely interfere with
 # potentail legitimate traffic - best to use: SET_PORTS_NOLOGIN and if you are running any 
@@ -115,9 +120,9 @@ else
 
   iptables -I INPUT -p tcp --match multiport --dports $BLOCK_PORTS -m set --match-set $SET_NAME src -j $IPTABLES_DROPTYPE
 
-  echo "iptables -I INPUT -p tcp --match multiport --dports $BLOCK_PORTS -m set --match-set $SET_NAME src -j LOG"
+  echo "iptables -I INPUT -p tcp --match multiport --dports $BLOCK_PORTS -m set --match-set $SET_NAME src -j LOG --log-prefix $LOG_PREFIX"
   # optional command to LOG dropped connections via the kern.warning syslog service.  Comment out the iptables to disable
-  iptables -I INPUT -p tcp --match multiport --dports $BLOCK_PORTS -m set --match-set $SET_NAME src -j LOG
+  iptables -I INPUT -p tcp --match multiport --dports $BLOCK_PORTS -m set --match-set $SET_NAME src -j LOG --log-prefix $LOG_PREFIX
 
 fi
 
