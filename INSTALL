@@ -113,6 +113,8 @@ Future updates will probably make things easier to manage.
 Other steps: How to handle updates
 ==================================
 
+Check the file VERSION and UPGRADE_NOTE - for any special instructions regarding program changes.
+
 If you want to set up login-shield to run automatically at boot time, that's beyond the scope of this guide.  But it's obviously not terribly difficult to do.
 
 However, I will go into certain scenarios on how to update/maintain your login-shield system.
