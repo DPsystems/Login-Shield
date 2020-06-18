@@ -3,6 +3,9 @@
 # List of non-US networks that are often compromised or used as botnets.
 # Be sure to examine and comment out any systems you may use before running.
 #
+# ro - hacking
+45.14.148.0/22
+
 # ca - kw datacenter hosting
 45.62.192.0/18
 
