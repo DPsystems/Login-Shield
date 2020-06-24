@@ -166,6 +166,8 @@
 124.0.0.0/8
 # 125 - cn,au
 125.0.0.0/8
+# 139.170 - cn telecom
+139.170.0.0/16
 # 105 - africa, egypt
 105.0.0.0/8
 # 154 - dedicated to africa but used by hong kong cloud hosting - large blocks appear to be un-allocated - possibly should blacklist
