@@ -21,7 +21,7 @@ echo ' |______\___/ \__, |_|_| |_|    |_____/|_| |_|_|\___|_|\__,_|'
 echo '               __/ |'
 echo '              |___/'
 echo '======= Attack Statistics based on current log files ======='
-echo " Using: $BL_LOGFILE"
+echo " Using: $BL_LOGFILE Key: $BL_GREP"
 echo
 START=`head -n 1 $BL_LOGFILE | tr -s ' ' | cut -d ' ' -f 1-3`
 echo "From: $START"
