@@ -4,6 +4,8 @@
 # Be sure to examine and comment out any systems you may use before running.
 #
 #
+# bulgeria - bulsatcom
+158.58.192.0/18
 
 # cz - hacking
 86.49.128.0/17
@@ -20,8 +22,9 @@
 # ca - kw datacenter hosting
 45.62.192.0/18
 
-# africa - botswanna
+# africa 
 168.167.0.0/16
+160.242.0.0/16
 
 # br - telecom
 168.181.0.0/16
