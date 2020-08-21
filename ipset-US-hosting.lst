@@ -170,6 +170,7 @@
 
 # US - zenlayer - Los Angeles (tor servers also found)
 107.155.0.0/18
+45.43.32.0/19
 
 # US - datawagon - hosting
 104.192.0.0/22
