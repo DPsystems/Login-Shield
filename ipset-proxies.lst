@@ -2,6 +2,21 @@
 #
 # Known proxy servers - always a good idea to block
 #
+# jp xserver
+103.141.96.0/23
+
+# de globalaxs
+141.98.102.0/24
+
+# us quintex (accepts bitcoin)
+199.249.230.0/24
+199.249.223.0/24
+
+# us buyproxies.org
+104.140.80.0/24
+104.18.48.0/24
+104.18.49.0/24
+
 # pl proxies
 128.127.80.0/20
 

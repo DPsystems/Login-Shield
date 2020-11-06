@@ -61,7 +61,7 @@
 1.0.0.0/8
 # 2 - es,de,se,uk,it,etc - european ISPs
 2.0.0.0/8
-# 5 - ru,de,sa,kz,gb,li,tr etc
+# 5 - ru,de,sa,kz,gb,li,tr,uae etc
 5.0.0.0/8
 # 14 - kr,cn,vn,hk
 14.0.0.0/8
@@ -160,7 +160,7 @@
 # 120-121 - cn
 120.0.0.0/8
 121.0.0.0/8
-# 122 - japan
+# 122 - japan/cn
 122.0.0.0/8
 # 123 - japan,kr
 123.0.0.0/8
