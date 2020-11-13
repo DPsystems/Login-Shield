@@ -89,7 +89,7 @@ You can also add the parameter "del" to remove them if you want to un-do your ef
 Step 4: Copy/Edit the set-iptables.sh-config script
 ===================================================
 
-cp set-iptables.sh-config to set-iptables.sh
+cp set-iptables.sh-config set-iptables.sh
 
 Inside the script: set-iptables.sh  contains a number of commented-out lines that allow you to pick which ports you want to apply
 for the blacklist.  I've intentionally commented out the key port definition so the script cannot be run and executed until you edit
