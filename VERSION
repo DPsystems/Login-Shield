@@ -2,6 +2,9 @@
 # ===============
 
 Version 
+	0.01b - 2019-10 - Initial public committed version
+        0.02b - 2019-12 - More updates, improved attack_statistics.sh to more accurately retrieve country source
+        0.03b - 2020-01 - Minor fixes and continued updating of blacklists
         0.10b - 2020-06 - Minor updates and revision of iptables rules and statistic logging
 
 Updated set-iptables.sh to add special log prefix to iptables rules.  We have multiple versions of this
@@ -10,9 +13,6 @@ differently.  Starting with version 0.10b, a special log prefix will appear in t
 
 
 
-	0.01b - 2019-10 - Initial public committed version
-        0.02b - 2019-12 - More updates, improved attack_statistics.sh to more accurately retrieve country source
-        0.03b - 2020-01 - Minor fixes and continued updating of blacklists
 
 
 
