@@ -6,7 +6,8 @@
 # Be sure to edit the file ipsets.lst to list any ipset list
 # names you want to check
 #
-# ZZZ - add filtering to $1 so that only 0-9. and / are allowed
+# Note this script doesn't have any input filtering 
+# Future updates: add filtering to $1 so that only 0-9. and / are allowed
 #
 echo ''
 file="./ipsets.lst"
