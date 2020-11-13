@@ -22,7 +22,7 @@ There are two basic parts to this system:
 1.  Setting up the blacklist
 2.  Enabling the blacklist
 
-For Part 1, there are several different shells scripts to run. 
+For Part 1, there are several different shell scripts to run. 
 First there is a script to create the list, then there are several
 different scripts to add different types of IP ranges to the blacklist.
 
