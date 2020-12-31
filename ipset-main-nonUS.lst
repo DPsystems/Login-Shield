@@ -57,7 +57,7 @@
 #
 ###### BEGIN BLACKLIST
 #
-# 1 - cn,jp,kr,tw
+# 1 - cn,jp,kr,tw,vn
 1.0.0.0/8
 # 2 - es,de,se,uk,it,etc - european ISPs
 2.0.0.0/8
