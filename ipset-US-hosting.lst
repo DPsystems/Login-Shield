@@ -15,6 +15,7 @@
 
 # us - linode
 72.14.176.0/20
+192.155.80.0/20
 
 # us - secure internet llc - system probes - vpn https://scamalytics.com/ip/isp/secure-internet-llc
 172.111.128.0/17
