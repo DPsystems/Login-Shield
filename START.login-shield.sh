@@ -2,7 +2,7 @@
 # run as root
 #
 # specify the location of your login shield installation
-PATH=/path-to-your/installation
+PATH=./
 #
 #
 cd $PATH
