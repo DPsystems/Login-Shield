@@ -4,6 +4,9 @@
 # Before using, examine this file and ensure there are no IP blocks here that 
 # you may need to login to your server from!   Comment them out with #
 ######
+# us - interserver
+174.138.176.0/20
+
 # us - il singlehop.com
 96.127.128.0/18
 
