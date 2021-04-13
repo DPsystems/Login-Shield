@@ -2,6 +2,8 @@
 #
 # Known proxy servers - always a good idea to block
 #
+# pa - vps trump tower
+91.191.209.0/24
 
 # jp xserver
 103.141.96.0/23
