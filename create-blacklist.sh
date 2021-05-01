@@ -8,6 +8,6 @@ SET_NAME="login-shield"
 SET_TYPE="hash:net"
 SET_CONFIG="hashsize 16384 maxelem 131072"
 #ipset create $SET_NAME $SET_TYPE $SET_CONFIG
-
+echo "Running: ipset -exist create $SET_NAME hash:net"
 ipset -exist create $SET_NAME hash:net
 

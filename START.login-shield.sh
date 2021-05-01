@@ -2,10 +2,10 @@
 # run as root
 #
 # specify the location of your login shield installation
-PATH=./
+MYPATH=./
 #
 #
-cd $PATH
+cd $MYPATH
 echo "This script creates and intializes the login-shield blacklist"
 echo ""
 # create the ipset list
