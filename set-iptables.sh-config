@@ -59,44 +59,7 @@ fi
 # 993 - imaps (imap over SSL/TLS)
 # 994 - 
 # 995 - 
-# 4190 - Plesk Dovecot
-# 3659 - ?
-
-
-IPTABLES_WAIT=""
-if iptables --help | fgrep -q -- '--wait'; then
-  IPTABLES_WAIT="-w" # use --wait when iptables supports it
-fi
-
-if [[ $1 = @(del|delete|DELETE) ]]; then
-  PARM="del"
-else
-  PARM=""
-fi
-
-#echo "wait=" $IPTABLES_WAIT
-
-echo "######"
-echo "#"
-if [[ $PARM == "del" ]]; then
-  echo "#  This script will DISABLE the LOGIN-SHIELD IP blacklist via IPTABLES"
-else
-  echo "#  This script will enable the LOGIN-SHIELD IP blacklist via IPTABLES"
-fi
-echo "#"
-echo "# WARNING:  This can cause you to lose connectivity to your server if not properly configured!"
-echo "#"
-
-read -p "Continue (Y/n)?" CONT
-
-if [[ $CONT =~ ^(y|Y|$) ]]; then # this also accept ENTER, to default to No remove the |$
-  echo "Yes";
-
-
-# set which command/parameters for the blocking/logging
-
-# alternate (more cpu intensive) way of notifying them they've been rejected
-#IPTABLES_DROPTYPE="REJECT --reject-with icmp-host-prohibited"
+# 4190 - Manage Sieve
 #IPTABLES_DROPTYPE="REJECT --reject-with icmp-port-unreachable"
 # default just drop
 IPTABLES_DROPTYPE="DROP"
