@@ -59,7 +59,7 @@ fi
 # 993 - imaps (imap over SSL/TLS)
 # 994 - 
 # 995 - 
-# 4190 - Plesk Dovecot
+# 4190 - Manage Sieve (sieve filters)
 # 3659 - ?
 
 
