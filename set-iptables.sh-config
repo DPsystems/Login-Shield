@@ -108,10 +108,10 @@ if [[ $PARM == "del" ]]; then
   echo "DELETING IPTABLES rules using ipset blacklist: $SET_NAME for ports: $BLOCK_PORTS"
 
   echo "iptables -D INPUT -p tcp --match multiport --dports $BLOCK_PORTS -m set --match-set $SET_NAME src -j $IPTABLES_DROPTYPE"
-  iptables -D INPUT -p tcp --match multiport --dports $BLOCK_PORTS -m set --match-set $SET_NAME src -j DROP
+  iptables -D INPUT -p tcp --match multiport --dports $BLOCK_PORTS -m set --match-set $SET_NAME src -j $IPTABLES_DROPTYPE
 
-  echo "iptables -D INPUT -p tcp --match multiport --dports $BLOCK_PORTS -m set --match-set $SET_NAME src -j LOG"
-  iptables -D INPUT -p tcp --match multiport --dports $BLOCK_PORTS -m set --match-set $SET_NAME src -j LOG
+  echo "iptables -D INPUT -p tcp --match multiport --dports $BLOCK_PORTS -m set --match-set $SET_NAME src -j LOG --log-prefix $LOG_PREFIX"
+  iptables -D INPUT -p tcp --match multiport --dports $BLOCK_PORTS -m set --match-set $SET_NAME src -j LOG --log-prefix $LOG_PREFIX
 
 else
 
