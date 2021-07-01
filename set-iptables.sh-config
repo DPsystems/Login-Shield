@@ -55,13 +55,19 @@ fi
 # 21 - ftp
 # 22 - ssh
 # 23 - telnet (hopefully nobody is using this still)
+# 118 - sql
 # 143 - imap (mail login port)
+# 989 - ftps
+# 990 - ftps
+# 992 - telnet crypted
 # 993 - imaps (imap over SSL/TLS)
-# 994 - 
-# 995 - 
+# 994 - IRC
+# 995 - pop3 encrypted
+# 3306 - mysql
 # 4190 - Plesk Dovecot
-# 3659 - ?
-
+# 3659 - SASL/apple mail
+# 4190 - Manage Sieve
+# 5432 - Postgress
 
 IPTABLES_WAIT=""
 if iptables --help | fgrep -q -- '--wait'; then
