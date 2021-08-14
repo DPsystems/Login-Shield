@@ -4,6 +4,13 @@
 # Before using, examine this file and ensure there are no IP blocks here that 
 # you may need to login to your server from!   Comment them out with #
 ######
+# us - tx - totalserversolutions
+104.200.128.0/19
+
+# us - quickserver.co
+23.148.143.0/24
+23.148.144.0/23
+
 # us - censys.io
 162.142.125.0/24
 167.248.133.0/24
