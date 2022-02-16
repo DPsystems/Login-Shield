@@ -4,6 +4,10 @@
 # Be sure to examine and comment out any systems you may use before running.
 #
 #
+###############
+# nl serverion
+2.56.56.0/22
+
 # nl - hacking
 136.144.41.0/24
 
