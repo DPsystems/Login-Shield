@@ -9,4 +9,6 @@
 
 01/20/2020 - fixed minor glitch in ./count_logins.sh showing error in % attacks blocked
 
+04/04/2022 - Most of the updates have been to the IP blacklist data, responding to new information and changes to the threat angle of IP space.  Not much has needed to change with the core code.
+
 ## End
