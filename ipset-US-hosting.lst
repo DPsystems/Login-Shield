@@ -12,6 +12,7 @@
 
 # us - tx - totalserversolutions
 104.200.128.0/19
+172.98.64.0/19
 
 # us - quickserver.co
 23.148.143.0/24
