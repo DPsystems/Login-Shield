@@ -13,14 +13,14 @@ TO=dolsen803@gmail.com
 # if you want a reply-to
 REPLY=noreply@somewhere.com
 
-WEBSHIELDDIR=/path/to/your/login-shield-install
+LOGINSHIELDDIR=/path/to/your/login-shield-install
 
 TMPFILE=/tmp/loginshield-mail-$$.txt
 TMPREPORT=/tmp/loginshield-report-$$.txt
 HOSTNAME=`uname -n`
 SUB="[$HOSTNAME] Login-Shield Report"
 
-cd $WEBSHIELDDIR
+cd $LOGINSHIELDDIR
 ./count_logins.sh lookup > $TMPREPORT
 echo "" >> $TMPREPORT
 echo "" >> $TMPREPORT
