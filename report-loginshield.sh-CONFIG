@@ -1,0 +1,44 @@
+#!/bin/sh
+#
+# generate mailable report at end of month
+#
+# rename this to report-loginshield.sh and call it from CRON at end of the month
+#
+echo '# Running report-loginshield.sh'
+
+# CHANGE THESE SETTINGS
+
+# who the report goes to:
+TO=dolsen803@gmail.com
+# if you want a reply-to
+REPLY=noreply@somewhere.com
+
+WEBSHIELDDIR=/www/ban/mp-bl/pub
+TMPFILE=/tmp/loginshield-mail-$$.txt
+TMPREPORT=/tmp/loginshield-report-$$.txt
+HOSTNAME=`uname -n`
+SUB="[$HOSTNAME] Login-Shield Report"
+
+cd $WEBSHIELDDIR
+./count_logins.sh lookup > $TMPREPORT
+echo "" >> $TMPREPORT
+echo "" >> $TMPREPORT
+./attack_stats.sh lookup >> $TMPREPORT
+
+
+# Let's mail 'em
+echo "To: $TO" > $TMPFILE
+echo "Reply-to: $REPLY" >> $TMPFILE
+echo "Subject: $SUB" >> $TMPFILE
+echo "Content-type: Text/plain" >> $TMPFILE
+echo "" >> $TMPFILE
+echo "" >> $TMPFILE
+cat $TMPREPORT >> $TMPFILE
+
+sendmail -t < $TMPFILE  
+echo Mailed to: $TO
+echo ""
+rm -f $TMPFILE
+rm -f $TMPREPORT
+####
+# end
