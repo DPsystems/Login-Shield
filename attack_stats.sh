@@ -82,3 +82,8 @@ else
 	echo "---------------------"
 	head -n $COUNT ip_rankings.txt
 fi
+rm -f temp.txt
+rm -f ip_rankings.txt
+rm -f temp2b.txt
+rm -f temp3b.txt
+

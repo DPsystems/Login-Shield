@@ -6,6 +6,7 @@ Version
         0.02b - 2019-12 - More updates, improved attack_statistics.sh to more accurately retrieve country source
         0.03b - 2020-01 - Minor fixes and continued updating of blacklists
         0.10b - 2020-06 - Minor updates and revision of iptables rules and statistic logging
+        1.00  - 2023-03 - Tested for many years; time to call this a legit release
 
 Updated set-iptables.sh to add special log prefix to iptables rules.  We have multiple versions of this
 script series coming out for more/less restrictions and want to log the different ipset/iptables rules

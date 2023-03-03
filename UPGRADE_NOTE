@@ -1,7 +1,6 @@
 
-For this version I've made some changes to the IPTABLES command.  This means if you want to implement the new setup you'll need to first delete the 
-base iptables rules using the current "set-iptables.sh del" command before using the new set-iptables-config.sh command - renamed to set-iptables.sh after
-customization.
+Added a new script to generate a mailable report - assuming the sendmail command works on your system.
 
-Reason - I've added a new prefix to the logging because we have multiple blacklist scripts and want to offer different levels of protection/logging/reporting.
+See report-loginshield.sh-CONFIG - edit that and rename to report-loginshield.sh and call from crontab
+
 
