@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# generate mailable report at end of month
+# generate mailable report at end of month (or whenever)
 #
 # rename this to report-loginshield.sh and call it from CRON at end of the month
 #
@@ -13,7 +13,8 @@ TO=dolsen803@gmail.com
 # if you want a reply-to
 REPLY=noreply@somewhere.com
 
-WEBSHIELDDIR=/www/ban/mp-bl/pub
+WEBSHIELDDIR=/path/to/your/login-shield-install
+
 TMPFILE=/tmp/loginshield-mail-$$.txt
 TMPREPORT=/tmp/loginshield-report-$$.txt
 HOSTNAME=`uname -n`
