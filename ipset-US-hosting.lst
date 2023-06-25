@@ -3,6 +3,8 @@
 # List of US-based hosting providers that commonly host malicious activities
 # Before using, examine this file and ensure there are no IP blocks here that 
 # you may need to login to your server from!   Comment them out with #
+#
+# If a provider has a reliable abuse policy, they won't end up on this list
 ######
 # us serverion
 208.67.104.0/22
