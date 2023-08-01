@@ -64,7 +64,7 @@ fi
 # 994 - IRC
 # 995 - pop3 encrypted
 # 3306 - mysql
-# 4190 - Plesk Dovecot
+# 4190 - Plesk Dovecot/ManageSieve protocol
 # 3659 - SASL/apple mail
 # 4190 - Manage Sieve
 # 5432 - Postgress
