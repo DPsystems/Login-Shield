@@ -6,6 +6,7 @@
 #
 # If a provider has a reliable abuse policy, they won't end up on this list
 ######
+
 # us - web2objects.com - high risk - https://scamalytics.com/ip/isp/web2objects-llc
 104.232.192.0/19
 104.238.32.0/19
@@ -28,6 +29,7 @@
 23.148.144.0/23
 
 # us - censys.io
+206.168.32.0/22
 199.45.154.0/23
 162.142.125.0/24
 167.248.133.0/24
