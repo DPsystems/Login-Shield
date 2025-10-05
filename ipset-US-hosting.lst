@@ -6,6 +6,17 @@
 #
 # If a provider has a reliable abuse policy, they won't end up on this list
 ######
+# us academyforinternetresearch.org - abusive system probes
+172.232.188.177
+172.236.233.65
+97.107.140.120
+45.33.50.24
+96.126.117.80
+172.234.207.202
+172.234.143.92
+172.105.102.10
+139.162.251.127
+172.237.28.61
 
 # us - web2objects.com - high risk - https://scamalytics.com/ip/isp/web2objects-llc
 104.232.192.0/19
