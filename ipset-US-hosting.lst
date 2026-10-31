@@ -6,6 +6,9 @@
 #
 # If a provider has a reliable abuse policy, they won't end up on this list
 ######
+# fl us fdcservers
+198.16.64.0/18
+
 # us academyforinternetresearch.org - abusive system probes
 172.232.188.177
 172.236.233.65
